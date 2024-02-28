@@ -1,0 +1,15 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#word-input{
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.output-palindroma{
+    width: fit-content;
+    font-size: 2rem;
+}
