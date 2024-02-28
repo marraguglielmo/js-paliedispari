@@ -11,7 +11,7 @@ if(word == wordReverse){
 }
 
 
-// FUNZIONE
+// FUNCTION
 function reverse(txt){
     // aggiungo il metodo join per riunire le lettere e poter confrontare le stringhe
     let txtReverse = txt.split('').reverse('').join('');
@@ -20,3 +20,15 @@ function reverse(txt){
 
 
 // PARI E DISPARI
+const choicePlayer = 'pari'; // inserire input 
+const numPlayer = 2 //inserire input
+const choicePc = numRandomPc(1, 5);
+console.log(choicePc);
+
+
+
+
+// FUNCTIONS
+function numRandomPc(min, max){
+    return Math.floor(Math.random() * (5 - 1 + 1) +1);
+}
