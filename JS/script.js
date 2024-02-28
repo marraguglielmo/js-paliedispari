@@ -34,6 +34,7 @@ btn.addEventListener('click', function(){
 
 
 
+
     
     /**
      * funzione per estrarre un numero random da 1 a 5
@@ -45,7 +46,6 @@ btn.addEventListener('click', function(){
     function numRandomPc(min, max){
        return Math.floor(Math.random() * (max - min + 1) + min);
     }
-    
     /**
      * funzione che verifica se il risultato è pari o dispari
      * @param {number} num1 
@@ -63,11 +63,13 @@ btn.addEventListener('click', function(){
                     output2.innerHTML = "È uscito dispari. Hai perso...";
                 }
             }else if(choicePlayer === 'dispari'){
-                if((num1 + num2) % 3 === 0){
+                if((num1 + num2) % 2 === 1){
                     output2.innerHTML = "È uscito dispari. Hai vinto ☻";
                 }else{
                     output2.innerHTML = "È uscito pari. Hai perso...";
                 }
+            }else{
+                output2.innerHTML = " !! INSERISCI 'pari' O 'dispari' !!";
             }
 
             
