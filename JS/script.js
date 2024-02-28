@@ -30,11 +30,6 @@ btn.addEventListener('click', function(){
     const result = pariDispari(numPlayer, numPc)
 
 
-    console.log('giocatore =',numPlayer,'PC =', numPc);
-
-
-
-
     
     /**
      * funzione per estrarre un numero random da 1 a 5
@@ -54,6 +49,7 @@ btn.addEventListener('click', function(){
     */
     function pariDispari(num1, num2){
         const output2 = document.querySelector('.output-pd');
+        const outputNumeri = document.querySelector('.output-numeri');
     
         if(numPlayer > 0 && numPlayer < 6){
             if(choicePlayer === 'pari'){
@@ -72,6 +68,7 @@ btn.addEventListener('click', function(){
                 output2.innerHTML = " !! INSERISCI 'pari' O 'dispari' !!";
             }
 
+            outputNumeri.innerHTML = `Il giocatore ha giocato ${numPlayer}, il PC ha giocato ${numPc}`;
             
         }else{
             output2.innerHTML = '!! ATTENZIONE !! DEVI INSERIRE UN NUMERO DA 1 A 5;'

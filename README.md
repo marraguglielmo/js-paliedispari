@@ -13,7 +13,7 @@ Dichiariamo chi ha vinto.
 
 ## Svolgimento
 
-PALIDROMA <br>
+PALINDROMA <br>
 
 1. chiedo all'utente di inserire una parola in un input
 2. con una funzione applico il metodo split alla parola che ricevo, ottenendo un'array
