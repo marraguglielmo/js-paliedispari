@@ -1,3 +1,4 @@
+// PALINDROMA
 const outputPali = document.querySelector('.output-palindroma');
 const word = document.getElementById('word-input').value;
 // uso la funzione
@@ -10,7 +11,6 @@ if(word == wordReverse){
 }
 
 
-
 // FUNZIONE
 function reverse(txt){
     // aggiungo il metodo join per riunire le lettere e poter confrontare le stringhe
@@ -18,5 +18,5 @@ function reverse(txt){
     return txtReverse;
 }
 
-console.log(word);
-console.log(wordReverse);
+
+// PARI E DISPARI
