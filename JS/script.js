@@ -1,8 +1,12 @@
 const word = document.getElementById('word-input').value;
-
-const array = word.split("");
-console.log(word, array);
+const wordReverse = reverse(word);
 
 
-array.reverse();
-console.log(word, array);
+
+
+function reverse(txt){
+    let txtReverse = txt.split('').reverse('');
+    return txtReverse;
+}
+
+console.log(wordReverse);
