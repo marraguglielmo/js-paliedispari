@@ -1,4 +1,4 @@
-// PALINDROMA
+// // PALINDROMA ////////////////////
 const outputPali = document.querySelector('.output-palindroma');
 const word = document.getElementById('word-input').value;
 // uso la funzione
@@ -19,48 +19,62 @@ function reverse(txt){
 }
 
 
-// PARI E DISPARI
-const choicePlayer = document.getElementById('pd-input').value;  
-const numPlayer = parseInt(document.getElementById('num-input').value);
-const numPc = numRandomPc(1, 5);
-result = pariDispari(numPlayer, numPc)
-console.log(numPlayer, numPc);
+// PARI E DISPARI //////////////////
+btn.addEventListener('click', function(){
+
+
+    const btn = document.getElementById('btn');
+    const choicePlayer = document.getElementById('pd-input').value;  
+    const numPlayer = parseInt(document.getElementById('num-input').value);
+    const numPc = numRandomPc(1, 5);
+    const result = pariDispari(numPlayer, numPc)
+
+
+    console.log('giocatore =',numPlayer,'PC =', numPc);
 
 
 
-
-
-
-
-/**
- * funzione per estrarre un numero random da 1 a 5
- * @param {number} min 
- * @param {number} max 
- * @returns number
-*/
-// FUNCTIONS
-function numRandomPc(min, max){
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-/**
- * funzione che verifica se il risultato è pari o dispari
- * @param {number} num1 
- * @param {number} num2 
- * @returns string
-*/
-function pariDispari(num1, num2){
-    const result = "";
-    const output2 = document.querySelector('.output-pd');
     
-    if(numPlayer > 5 || numPlayer <= 0){
-        output2.innerHTML = '!!ATTENZIONE!! Il numero inserito deve essere tra 1 e 5';
-        return;
-    }else if((num1 + num2) % 2 === 0 && choicePlayer == 'pari'){
-        output2.innerHTML = 'È uscito pari. vince il Giocatore';
-        return;
-    }else{
-        output2.innerHTML = 'È uscito dispari. vince il PC';
-        return;
+    /**
+     * funzione per estrarre un numero random da 1 a 5
+     * @param {number} min 
+     * @param {number} max 
+     * @returns number
+    */
+   // FUNCTIONS
+    function numRandomPc(min, max){
+       return Math.floor(Math.random() * (max - min + 1) + min);
     }
-}
+    
+    /**
+     * funzione che verifica se il risultato è pari o dispari
+     * @param {number} num1 
+     * @param {number} num2 
+     * @returns string
+    */
+    function pariDispari(num1, num2){
+        const output2 = document.querySelector('.output-pd');
+    
+        if(numPlayer > 0 && numPlayer < 6){
+            if(choicePlayer === 'pari'){
+                if((num1 + num2) % 2 === 0){
+                    output2.innerHTML = "È uscito pari. Hai vinto ☻";
+                }else{
+                    output2.innerHTML = "È uscito dispari. Hai perso...";
+                }
+            }else if(choicePlayer === 'dispari'){
+                if((num1 + num2) % 3 === 0){
+                    output2.innerHTML = "È uscito dispari. Hai vinto ☻";
+                }else{
+                    output2.innerHTML = "È uscito pari. Hai perso...";
+                }
+            }
+
+            
+        }else{
+            output2.innerHTML = '!! ATTENZIONE !! DEVI INSERIRE UN NUMERO DA 1 A 5;'
+        }
+    }
+
+    
+})
